@@ -18,7 +18,7 @@ class DiamondTest(unittest.TestCase):
     def test_draw_c_line(self):
         diamond = Diamond("c")
         result = diamond.getLine(2)
-        self.assertEqual(result, "c c c\n")
+        self.assertEqual(result, "c   c\n")
 
     def test_draw_top_lines(self):
         diamond = Diamond("c")
@@ -28,11 +28,11 @@ class DiamondTest(unittest.TestCase):
     def test_draw_botton_lines(self):
         diamond = Diamond("c")
         result = diamond.drawBottom(2)
-        self.assertEqual(result, "c c c\nb b\na")
+        self.assertEqual(result, "c   c\nb b\na")
 
     def test_diamond_success_example_case(self):
         letter = "c"
-        start = "a\nb b\nc c c\nb b\na"
+        start = "a\nb b\nc   c\nb b\na"
         diamond = Diamond(letter)
         self.assertEqual(start, diamond.draw())
 

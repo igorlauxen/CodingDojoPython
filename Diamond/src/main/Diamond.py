@@ -40,12 +40,19 @@ class Diamond:
 
     def getLine(self, index):
         word = WORDS[index]
+
+        if index == 0:
+            return word
+        else:
+            return word + self.drawSpaces(index) + word + "\n"
+
+        return result
+
+    def drawSpaces(self, size):
         result = ""
-        counter = 0
-        while (counter <= index):
-            if counter == index:
-                result += word + "\n"
-            else:
-                result += word + " "
-            counter += 1
+        x = 0
+        lessThan =  size  if size%2 == 0 else size-1
+        while (x <= lessThan):
+            result += " "
+            x += 1
         return result
